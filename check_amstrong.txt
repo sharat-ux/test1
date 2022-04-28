@@ -1,0 +1,35 @@
+import java.util.Scanner;
+import java.lang.Math;
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+        Scanner sc=new Scanner(System.in);
+        int i=0,number1,number,temp;
+        number=sc.nextInt();
+         number1=number;
+        temp=number;
+        while(number>0)
+        {
+            number=number/10;
+            i++;
+        }
+        int result=0;
+        while(number1!=0)
+        {
+            
+            result=result+(int)Math.pow(number1%10,i);
+           number1=number1/10; 
+        }
+
+        if(temp==result)
+        {
+            System.out.print(true);
+        }
+        else
+        {
+            System.out.print(false);
+        }
+
+	}
+}
